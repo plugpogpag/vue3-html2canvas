@@ -1,30 +1,22 @@
+
 <script setup>
-import { usePDF } from 'vue3-pdfmake-v2';
+import { ref } from "vue";
+import { useHtml2Canvas } from "vue3-html2canvas";
 
-const pdfmake = usePDF({
-  autoInstallVFS: true
-})
-
-const onGenPDF = () => {
-  pdfmake.createPdf({
-    content: [
-    {
-			style: 'tableExample',
-			table: {
-				widths: ['10%', '10%', '10%', '10%'],
-				body: [
-					['width=100', 'star-sized', 'width=200', 'star-sized'],
-					['fixed-width cells have exactly the specified width', {text: 'nothing interesting here', italics: true, color: 'gray'}, {text: 'nothing interesting here', italics: true, color: 'gray'}, {text: 'nothing interesting here', italics: true, color: 'gray'}]
-				]
-			}
-		},
-    ]
-  }).download();
+const html2canvas = useHtml2Canvas();
+const canvasTarget = ref(null);
+const containerShowCanvas = ref(null);
+async function onGenHtmlToCanvas() {
+  const canvas = await html2canvas(canvasTarget.value, { });
+  containerShowCanvas.value.appendChild(canvas)
 }
 </script>
 
 <template>
-  <button @click="onGenPDF">Click here for download demo pdf</button>
+  <button @click="onGenHtmlToCanvas" ref="canvasTarget">Click here for download demo pdf</button>
+  <div ref="containerShowCanvas" style="display: flex;justify-content: center;align-items: center;flex-direction: column;">
+    <span>Result Of Canvas </span>
+  </div>
 </template>
 
 <style>

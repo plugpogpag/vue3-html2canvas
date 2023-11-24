@@ -1,9 +1,9 @@
 {
-  "name": "vue3-pdfmake-v2",
+  "name": "vue3-html2canvas",
   "author": "Novout",
   "license": "MIT",
-  "version": "2.2.0",
-  "description": "A pdfmake plugin for Vue 3",
+  "version": "1.0.0",
+  "description": "A html2canvas plugin for Vue 3",
   "type": "module",
   "sideEffects": false,
   "exports": {
@@ -16,10 +16,7 @@
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/plugpogpag/vue-pdfmake"
-  },
+  "repository": "https://github.com/plugpogpag/vue3-html2canvas",
   "scripts": {
     "build": "tsup",
     "patch": "generi log patch",
@@ -31,11 +28,12 @@
   },
   "keywords": [
     "vue",
-    "pdfmake"
+    "html2canvas"
   ],
   "dependencies": {
-    "pdfmake": "^0.2.8",
-    "vue-demi": "latest"
+    "html2canvas": "^1.4.1",
+    "vue-demi": "latest",
+    "vue3-html2canvas": "^1.0.0"
   },
   "peerDependencies": {
     "@vue/composition-api": "^1.0.0-rc.1",

@@ -6,5 +6,5 @@ export default defineConfig({
   splitting: false,
   clean: true,
   dts: true,
-  noExternal: ['pdfmake']
+  noExternal: ['html2canvas']
 })

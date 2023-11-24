@@ -1,14 +1,7 @@
 import { App, Plugin } from 'vue-demi';
-import PDFMAKE from 'pdfmake/build/pdfmake';
-import VFS_FONTS from 'pdfmake/build/vfs_fonts';
-PDFMAKE.vfs = VFS_FONTS.pdfMake.vfs;
-interface PluginOptions {
-  autoInstallVFS?: boolean
-}
-
-export const PDFPlugin: Plugin = {
-  install: (app: App, options: PluginOptions = {}) => {
-    if(options.autoInstallVFS) PDFMAKE.addVirtualFileSystem(VFS_FONTS);
-    app.config.globalProperties.$pdf = PDFMAKE as any;
+import html2canvas from 'html2canvas';
+export const Html2CanvasPlugin: Plugin = {
+  install: (app: App) => {
+    app.config.globalProperties.$html2canvas = html2canvas as any;
   },
 };
