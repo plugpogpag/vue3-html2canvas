@@ -1,5 +1,5 @@
 <script setup>
-import { usePDF } from 'vue3-pdfmake';
+import { usePDF } from 'vue3-pdfmake-v2';
 
 const pdfmake = usePDF({
   autoInstallVFS: true
@@ -8,7 +8,16 @@ const pdfmake = usePDF({
 const onGenPDF = () => {
   pdfmake.createPdf({
     content: [
-      'Hello World From PDFMake!',
+    {
+			style: 'tableExample',
+			table: {
+				widths: ['10%', '10%', '10%', '10%'],
+				body: [
+					['width=100', 'star-sized', 'width=200', 'star-sized'],
+					['fixed-width cells have exactly the specified width', {text: 'nothing interesting here', italics: true, color: 'gray'}, {text: 'nothing interesting here', italics: true, color: 'gray'}, {text: 'nothing interesting here', italics: true, color: 'gray'}]
+				]
+			}
+		},
     ]
   }).download();
 }

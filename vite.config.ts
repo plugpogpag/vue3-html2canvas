@@ -13,7 +13,7 @@ export default defineConfig({
   resolve: {
     alias: [
       {
-        find: 'vue3-pdfmake',
+        find: 'vue3-pdfmake-v2',
         replacement: resolve(__dirname, './dist/index.js'),
       },
     ],

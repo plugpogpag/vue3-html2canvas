@@ -1,7 +1,7 @@
 import { App, Plugin } from 'vue-demi';
 import PDFMAKE from 'pdfmake/build/pdfmake';
 import VFS_FONTS from 'pdfmake/build/vfs_fonts';
-
+PDFMAKE.vfs = VFS_FONTS.pdfMake.vfs;
 interface PluginOptions {
   autoInstallVFS?: boolean
 }

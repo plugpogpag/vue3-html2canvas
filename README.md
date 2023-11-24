@@ -1,22 +1,23 @@
 # Vue PDFMake
+This project forked from [vue-pdfmake ](https://github.com/betterwrite/vue-pdfmake ) 
 
-A [PDFMake](http://pdfmake.org/#/) plugin for 3.x
+A [PDFMake](http://pdfmake.org/#/) plugin for vue 3.x 
 
 <img src="https://img.shields.io/npm/v/vue3-pdfmake?label=&style=for-the-badge" />
 
 ## Install
 
-`yarn add vue3-pdfmake`
+`yarn add vue3-pdfmake-v2`
 
 OR
 
-`npm install vue3-pdfmake`
+`npm install vue3-pdfmake-v2`
 
 in `main.(js|ts)`
 
 ```js
 import { createApp } from 'vue';
-import { PDFPlugin } from 'vue3-pdfmake';
+import { PDFPlugin } from 'vue3-pdfmake-v2';
 import App from './App.vue';
 
 const app = createApp(App);
@@ -30,7 +31,7 @@ app.mount('#app');
 
 ```vue
 <script setup>
-import { usePDF } from 'vue3-pdfmake';
+import { usePDF } from 'vue3-pdfmake-v2';
 
 const pdfmake = usePDF({
   autoInstallVFS: true

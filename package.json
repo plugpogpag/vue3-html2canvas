@@ -1,5 +1,5 @@
 {
-  "name": "vue3-pdfmake",
+  "name": "vue3-pdfmake-v2",
   "author": "Novout",
   "license": "MIT",
   "version": "2.2.0",
@@ -18,7 +18,7 @@
   "types": "./dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/betterwrite/vue-pdfmake"
+    "url": "https://github.com/plugpogpag/vue-pdfmake"
   },
   "scripts": {
     "build": "tsup",
@@ -34,7 +34,7 @@
     "pdfmake"
   ],
   "dependencies": {
-    "pdfmake": "0.3.0-beta.5",
+    "pdfmake": "^0.2.8",
     "vue-demi": "latest"
   },
   "peerDependencies": {
@@ -51,8 +51,8 @@
     "@types/node": "^14.18.36",
     "@vitejs/plugin-vue": "^2.3.4",
     "generi": "1.2.0",
-    "typescript": "^4.9.5",
     "tsup": "6.7.0",
+    "typescript": "^4.9.5",
     "vite": "4.1.1",
     "vue": "^3.2.47"
   },
