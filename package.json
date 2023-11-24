@@ -2,7 +2,7 @@
   "name": "vue3-html2canvas",
   "author": "Novout",
   "license": "MIT",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A html2canvas plugin for Vue 3",
   "type": "module",
   "sideEffects": false,
@@ -31,9 +31,8 @@
     "html2canvas"
   ],
   "dependencies": {
-    "html2canvas": "^1.4.1",
-    "vue-demi": "latest",
-    "vue3-html2canvas": "^1.0.0"
+    "html2canvas": "^1.0.0-alpha.12",
+    "vue-demi": "latest"
   },
   "peerDependencies": {
     "@vue/composition-api": "^1.0.0-rc.1",
