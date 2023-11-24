@@ -2,7 +2,7 @@ lockfileVersion: '6.0'
 
 dependencies:
   html2canvas:
-    specifier: ^1.4.1
+    specifier: ^1.0.0-alpha.12
     version: 1.4.1
   vue-demi:
     specifier: latest
